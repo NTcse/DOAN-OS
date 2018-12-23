@@ -1,0 +1,106 @@
+a{
+	text-decoration: none;
+}
+body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5em;
+	font-family: Verdana, Arial, san-serif;
+	font-size: 11px;
+	color: #000000;
+}
+h1{
+	font-family: Verdana, Arial, san-serif;
+}
+#header
+{
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+	min-width: 1000px;
+}
+#menu
+{
+	clear: both;
+	margin-top: -5px;
+	padding: 0;
+	width: 100%;
+	background-color:#D84B04;
+	height: 30px;
+}
+.mn_
+{
+	height: 20px;
+	float: left;
+	width: 25%;
+	text-align:center;
+	font-size: 150%;
+	font-weight: bold;
+	background: #D84B04;
+}
+.mn_ a{
+	color: #ffffff;
+}
+.sp
+{
+	margin: 3px;
+	float: left;
+	width: 30%;
+	min-width: 200px;
+	height: 300px;
+	background-color: #f0f0f0;
+	border: 2px  solid #ff0000;
+	align-content: center;
+	text-align: center;
+	font-weight: bold;
+	font-size: 100%;
+}
+#container
+{
+	margin: 0;
+	width: 100%;
+	background-color: #EDF2F4;
+}
+#dmsp
+{
+	float: left;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-color: #EF7223;
+	width: 250px;
+	font-size: 100%;
+}
+#divdm
+{
+	clear: all;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	line-height:1em;
+}
+#timkiem
+{
+	clear: all;
+	align-content: center;
+}
+#kqtimsp
+{
+	float: left;
+}
+#conten
+{	margin-left: 20%;
+	float: left;
+	margin: 0;
+	padding: 0;
+	max-width: 80%;
+	align-content: center;
+}
+#footer
+{
+	clear: all;
+	width: 100%
+	font-size:100%;
+	font-weight:bold;
+}
