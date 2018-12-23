@@ -33,7 +33,35 @@
               <td>Thành tiền</td>
               <td>Thao tác</td>
             </tr>
-            
+            <?php
+            $tong=0;
+            $run=1;
+            foreach ($_SESSION['giohang'] as $key => $value) 
+            { 
+              $sql ="select * from sanpham where ma_sp= '$key' ";
+              $obj = new PDO("mysql:host=". HOST."; dbname=". DB , USER, PASS);
+              $obj->query("set names 'utf8' ");
+              $data =$obj->query($sql);
+              $r = $data->fetch();
+                          //print_r($r); exit;
+              ?>
+              <tr>
+                <td><?php echo $run; $run+=1;?></td>
+                <td><?php echo $r['ten_sp'];?></td>
+                <td>
+                  <img src="sanpham/<?php echo $r['madanhmuc']; ?>/<?php echo $r['hinh'];?>" height=150>
+                </td>
+                <td><?php echo number_format($r['gia']).'đ';?></td>
+                <td><?php echo $value;?></td>
+                <td><?php echo number_format($r['gia']*$value).'đ'; $tong+=$r['gia']*$value;?></td>
+                <td>
+                  <a href="xoagiohang.php?ma_sp=<?php echo $key; ?>"><input type="button" name="xoa" value="Xóa"></a>
+                </td>
+              </tr>
+              <?php
+
+            }
+            ?>
           </table><br>
           </div>
         </div>
