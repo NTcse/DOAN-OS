@@ -37,7 +37,29 @@ include "config.php";
         ?>
       </div>
       <div id="conten">
-       
+       <?php
+       $id = $_GET['madanhmuc'];
+       $sql="select * from sanpham where madanhmuc='$id' ";
+       $obj = new PDO("mysql:host=". HOST."; dbname=". DB , USER, PASS);
+       $obj->query("set names 'utf8' ");
+       $data = $obj->query($sql);
+       $rows = $data->fetchAll();
+           //print_r($rows); exit;
+       foreach($rows as $r)
+       {
+        ?>
+        <div class="sp">
+          <p style="color: red; font-weight: bold; font-size: 100%"><?php echo $r['ten_sp'];?><br></p>
+          <p ><img src="sanpham/<?php echo $r['madanhmuc']; ?>/<?php echo $r['hinh']; ?>" height="138px" width="140px" ></p>
+          <p style="font-weight: bold;"  >Giá: <?php echo number_format($r['gia']).'đ';?></p>
+          <p>
+            <a href="chitietsp.php?ma_sp=<?php echo $r['ma_sp']?>"><input type="button" name="chitiet" value="Chi tiết"></a>
+            <a href="updategiohang.php?ma_sp=<?php echo $r['ma_sp']?>"><input type="button" name="mua" value="Mua"></a>
+          </p>
+        </div>
+        <?php 
+      }
+      ?>
 
     </div>
   </div>
