@@ -23,7 +23,18 @@
       </div>
       <div>
         <div>
-          
+          <table border="1" width="1119px" height="auto"; style="border-color: blue">
+            <tr style="text-align: center;font-weight: bold;">
+              <td>STT</td>
+              <td>Tên sản phẩm</td>
+              <td></td>
+              <td>Giá</td>
+              <td>SL</td>
+              <td>Thành tiền</td>
+              <td>Thao tác</td>
+            </tr>
+            
+          </table><br>
           </div>
         </div>
       </div>  
