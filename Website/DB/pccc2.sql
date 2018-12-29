@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 17, 2018 lúc 03:12 SA
+-- Thời gian đã tạo: Th12 29, 2018 lúc 07:53 SA
 -- Phiên bản máy phục vụ: 5.7.14
 -- Phiên bản PHP: 5.6.25
 
@@ -66,7 +66,7 @@ INSERT INTO `danhmucsp` (`madanhmuc`, `tendanhmuc`) VALUES
 CREATE TABLE `hoadon` (
   `mahd` varchar(100) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `ngay` datetime NOT NULL,
+  `ngay` date NOT NULL,
   `tennguoinhan` varchar(50) NOT NULL,
   `diachinguoinhan` varchar(80) NOT NULL,
   `ngaynhan` date NOT NULL,
@@ -124,7 +124,19 @@ INSERT INTO `sanpham` (`ma_sp`, `ten_sp`, `mota`, `gia`, `hinh`, `madanhmuc`) VA
 ('BABC03', 'Bình chữa cháy bột ABC MFZL4 4kg', 'Bình chữa cháy bột ABC MFZL4 4kg  gọi là bình loại tốt vì bình sử dụng bột chữa cháy dạng ABC có hàm lượng chữa cháy cao hơn và đa dụng hơn bột dạng BC. Khả năng chữa cháy đa dụng được mọi đám cháy cùng trọng lượng là dạng bình phổ thông nên bình thường được đặt ở một số khu vực có yêu cầu tiêu chuẩn an toàn cao hơn như trong siêu thị, phòng nghiên cứu, phòng thí nghiệm,... Ngoài ra ở một số nơi khắt khe hơn thì bình bột ABC 4kg còn được đặt chung với một bình khí CO2 để có hiệu quả cao nhất.', 290000, 'binh-chua-chay-bot-abc-mfzl4-4kg.jpg', 'BABC'),
 ('BBC01', 'Bình chữa cháy bột BC MFTZ35 35kg Có Xe Đẩy', 'Bình chữa cháy bột BC MFTZ35 35kg Có Xe Đẩy tiện dụng kèm thiết kế vòi phun dài thuận tiện cho việc chữa cháy trong hẻm ngách, súng phun an toàn thuận tiện chữa cháy tầm xa. Về kích thước, có thể hình dung bình bột chữa cháy 35kg giống i như bình gas trong nhà bạn, chỉ khác là bình được gắn thêm một xe kéo giúp tiện cho việc di chuyển chữa cháy lưu động. Khung xe được thiết kế có độ vững chắc và có thể tháo rời thay thế phụ kiện.', 1750000, 'binh-chua-chay-bot-bc-mfz35-35kg.jpg', 'BBC'),
 ('BBC02', 'Bình chữa cháy bột BC MFZ8 8kg GIÁ RẺ', 'Bình chữa cháy bột BC MFZ8 8kg GIÁ RẺ  thuộc dòng bình chữa cháy phổ thông có khả năng sử dụng cao hơn bình bột 4kg nhờ lượng bột bên trong bình nhiều hơn nhằm đáp ứng nhu cầu chữa cháy trong diện rộng hơn. Sử dụng bột chữa cháy dạng BC có giá thành rẻ nên thường thấy ở các khu dân cư, dãy nhà trọ, trung cư, trạm xăng dầu,... bình bột chữa cháy 8kg mã hàng MFZ8 có tổng trọng lượng khoảng 10kg tính cả vỏ bình nên một số khu vực có phụ nữ hay người lớn tuổi sẽ thường đặt kèm thêm một bình loại nhỏ.', 310000, 'binh-chua-chay-bot-bc-mfz8-8kg.jpg', 'BBC'),
-('BBC03', 'Bình chữa cháy bột BC MFZ4 4kg GIÁ RẺ', 'Bình chữa cháy bột BC MFZ4 4kg GIÁ RẺ  thuộc dòng sản phẩm bình chữa cháy được sử dụng nhiều nhất vì bình có độ an toàn cao, kích thước phù hợp để có thể lắp đặt ở mọi khu vực công ty, nhà xưởng, văn phòng trung cư, dãy trọ,... Ngoài ra bình chữa cháy bột bc mfz4 có giá thành rẻ hơn tất cả các loại bình khác với khả năng chữa cháy đa năng hiệu quả cao.', 245000, 'binh-chua-chay-bot-bc-mfz4-4kg.jpg', 'BBC');
+('BBC03', 'Bình chữa cháy bột BC MFZ4 4kg GIÁ RẺ', 'Bình chữa cháy bột BC MFZ4 4kg GIÁ RẺ  thuộc dòng sản phẩm bình chữa cháy được sử dụng nhiều nhất vì bình có độ an toàn cao, kích thước phù hợp để có thể lắp đặt ở mọi khu vực công ty, nhà xưởng, văn phòng trung cư, dãy trọ,... Ngoài ra bình chữa cháy bột bc mfz4 có giá thành rẻ hơn tất cả các loại bình khác với khả năng chữa cháy đa năng hiệu quả cao.', 245000, 'binh-chua-chay-bot-bc-mfz4-4kg.jpg', 'BBC'),
+('BCO21', 'Bình chữa cháy khí co2 mt3 3kg', 'bình-chữa-cháy-khí-co2-mt3-3kg', 390000, 'binh-chua-chay-khi-co2-mt3-3kg.jpg', 'BCO2'),
+('BCO22', 'bình chữa cháy khí co2 mt5 5kg', 'bình-chữa-cháy-khí-co2-mt5-5kg', 585000, 'binh-chua-chay-khi-co2-mt5-5kg.jpg', 'BCO2'),
+('BCO23', 'Bình chữa cháy khí CO2 MT24-24KG', 'bình-chữa-cháy-khí-co2-mt24-24kg', 3790000, 'binh-chua-chay-khi-co2-mt24-24kg.jpg', 'BCO2'),
+('CCCTD01', 'quả cầu chữa cháy tự động xzftb6 6kg', 'quả cầu chữa cháy tự động xzftb6-6kg', 480000, 'qua-cau-chua-chay-tu-dong-xzftb6-6kg.jpg', 'CCCTD'),
+('CCCTD02', 'quả cầu chữa cháy tự động xzftb8 8kg', 'quả cầu chữa cháy tự động xzftb8 8kg', 550000, 'qua-cau-chua-chay-tu-dong-xzftb8-8kg.jpg', 'CCCTD'),
+('CVCC01', 'cuộn vòi chữa cháy d50 đức 17bar 20m jakob eschbach germany', 'cuộn-vòi-chữa-cháy-d50-đức-17bar-20m-jakob-eschbach-germany', 1650000, 'cuon-voi-chua-chay-d50-duc-17bar-20m.jpg', 'CVCC'),
+('CVCC02', 'cuộn vòi chữa cháy d50 hàn quốc 13bar-20m-korea', 'cuộn vòi chữa cháy d50 hàn quốc 13bar 20m korea', 820000, 'cuon-voi-chua-chay-d50-han-quoc-13bar-20m.jpg', 'CVCC'),
+('CVCC03', 'cuộn vòi chữa cháy d65 đức 17bar 20m jakob eschbach germany', 'cuộn-vòi-chữa-cháy-d65-đức-17bar-20m-jakob-eschbach-germany', 1850000, 'cuon-voi-chua-chay-d65-duc-17bar-20m.jpg', 'CVCC'),
+('PKCC01', 'đèn cứu hỏa', 'đèn cứu hỏa báo  động   vừa xảy ra  vụ cháy ', 200000, 'den-cuu-hoa.jpg', 'PKCC'),
+('PKCC02', 'hộp chữa cháy', 'hộp chữa cháy nơi chứa ống dẫn nước  ', 250000, 'hop-chua-chay.jpg', 'PKCC'),
+('PKCC03', 'Tiểu lệnh', 'tiểu lệnh bản thông từn bước cần thực hiện khi có  cháy ', 50000, 'tieu-lenh.jpg', 'PKCC'),
+('PKCC04', 'máy bơm chữa cháy tohatsu mới nhất vf21as', 'máy-bơm-chữa-cháy-tohatsu-mới-nhất\r\nMÁY BƠM NƯỚC CÔNG SUẤT MẠNH GIÚP CHỮA CHÁY NHANH TẠI CHỖ ', 2500000, 'may-bom-chua-chay-tohatsu-moi-nhat-vf21as.jpg', 'PKCC');
 
 --
 -- Chỉ mục cho các bảng đã đổ
