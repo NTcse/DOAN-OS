@@ -62,6 +62,11 @@
 
             }
             ?>
+			<tr style="text-align: center;font-weight: bold;">
+              <td colspan="5" >Tổng tiền thanh toán: </td>
+              <td style="color: red;" ><?php echo number_format($tong).'đ'; ?></td>
+              <td> <a href="thongtinkhachhang.php"><input type="button" name="tt" value="Thanh Toán"></td>
+            </tr>
           </table><br>
           </div>
         </div>
